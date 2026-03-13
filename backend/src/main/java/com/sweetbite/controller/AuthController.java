@@ -6,6 +6,7 @@ import com.sweetbite.dto.LoginDTO;
 import com.sweetbite.dto.RegisterDTO;
 import com.sweetbite.dto.WechatLoginDTO;
 import com.sweetbite.dto.InviteUserDTO;
+import com.sweetbite.dto.UpdateUserInfoDTO;
 import com.sweetbite.service.IAuthService;
 import com.sweetbite.utils.JwtUtil;
 import com.sweetbite.vo.LoginVO;
@@ -74,6 +75,14 @@ public class AuthController {
         Long userId = getUserIdFromRequest(request);
         UserInfoVO userInfo = authService.getUserInfo(userId);
         return Result.success(userInfo);
+    }
+
+    @ApiOperation("更新用户信息")
+    @PutMapping("/update")
+    public Result<String> updateUserInfo(HttpServletRequest request, @RequestBody UpdateUserInfoDTO dto) {
+        Long userId = getUserIdFromRequest(request);
+        authService.updateUserInfo(userId, dto.getNickname(), dto.getAvatarUrl());
+        return Result.success("更新成功");
     }
     
     /**

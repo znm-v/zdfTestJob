@@ -8,7 +8,8 @@ export const Page = {
   SHOP: 'shop',
   PROFILE: 'profile',
   ORDERS: 'orders',
-  ADMIN: 'admin'
+  ADMIN: 'admin',
+  EDIT_PROFILE: 'edit-profile'
 };
 
 // 订单状态
