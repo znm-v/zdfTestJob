@@ -41,4 +41,9 @@ public interface IAuthService {
      * 邀请用户加入
      */
     LoginVO inviteUser(InviteUserDTO dto);
+
+    /**
+     * 更新用户信息
+     */
+    void updateUserInfo(Long userId, String nickname, String avatarUrl);
 }

@@ -26,7 +26,11 @@ export const authAPI = {
   
   // 获取用户信息
   getUserInfo: () => 
-    get('/auth/info')
+    get('/auth/info'),
+
+  // 更新用户信息
+  updateUserInfo: (data) =>
+    put('/auth/update', data)
 };
 
 /**

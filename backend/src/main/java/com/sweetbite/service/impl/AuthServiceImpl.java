@@ -249,4 +249,19 @@ public class AuthServiceImpl implements IAuthService {
                 .userInfo(userInfo)
                 .build();
     }
+
+    @Override
+    public void updateUserInfo(Long userId, String nickname, String avatarUrl) {
+        User user = userMapper.selectById(userId);
+        if (user == null) {
+            throw new BusinessException(ErrorCode.USER_NOT_FOUND);
+        }
+        if (nickname != null) {
+            user.setNickname(nickname);
+        }
+        if (avatarUrl != null) {
+            user.setAvatarUrl(avatarUrl);
+        }
+        userMapper.updateById(user);
+    }
 }
