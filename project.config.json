@@ -23,6 +23,7 @@
     "swc": false,
     "disableSWC": true
   },
+   "miniprogramRoot": "dist/",
   "compileType": "miniprogram",
   "simulatorPluginLibVersion": {},
   "packOptions": {

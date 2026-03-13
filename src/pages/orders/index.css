@@ -15,12 +15,13 @@
 }
 
 .orders-back {
-  font-size: 48rpx;
-  font-weight: bold;
+  font-size: 32rpx;
+  color: #999999;
 }
 
 .orders-header-text {
-  font-size: 32rpx;
+  font-size: 28rpx;
+  color: #999999;
 }
 
 /* 空状态 */
