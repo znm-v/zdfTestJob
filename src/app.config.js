@@ -1,7 +1,8 @@
 export default {
   pages: [
     'pages/login/index',
-    'pages/index/index'
+    'pages/index/index',
+    'pages/edit-profile/index'
   ],
   window: {
     backgroundTextStyle: 'light',
